@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.bak
+*.zip
+*backup*.sql
+**/catalog_*.json
+ELH_CRM_LOCAL_EXPORTS_DO_NOT_UPLOAD/
