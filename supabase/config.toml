@@ -1,0 +1,10 @@
+project_id = "elh-crm"
+
+[functions.callio-sync]
+# Authenticated by CALLIO_SYNC_SECRET (256 bits), stored only in Edge Secrets/Vault.
+# Legacy JWT validation does not support this project's modern API keys.
+verify_jwt = false
+
+[functions.crm-accounts]
+# Validates the caller JWT with auth.getUser and active ADMIN profile server-side.
+verify_jwt = false

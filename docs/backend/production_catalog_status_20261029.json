@@ -1,0 +1,30 @@
+{
+  "snapshot_date_local": "2026-10-29",
+  "project_ref": "qmzmkijlarwdlslipaou",
+  "source": "Supabase read-only metadata catalog and user-submitted manifest",
+  "verified_sections": {
+    "tables": 32,
+    "columns": 220,
+    "constraints": 124,
+    "indexes": 58,
+    "policies": 15,
+    "routines": 74,
+    "triggers": 2,
+    "views": 0,
+    "enums": 0,
+    "sequences": 9,
+    "extensions": 8,
+    "grants": 0
+  },
+  "metadata_export_status": "12/12 OK as reported by EXPORT_MANIFEST",
+  "restorable_database_backup": false,
+  "customer_data_included": false,
+  "auth_users_included": false,
+  "raw_ddl_included": false,
+  "grants_zero_note": "0 in exported catalog does not prove production has no privileges; review manually",
+  "sql_migrations_status": "Historical 2026-10-19 SQL held under docs/legacy_backend_20261019; not validated for 2026-10-29 and not under supabase/migrations",
+  "live_edge_functions": "callio-sync, crm-accounts; matched earlier live source checks",
+  "source_inventory_count": 131,
+  "source_inventory_notice": "Source scan was limited to names and a few common token patterns; not complete security assurance",
+  "actual_catalogs_not_uploaded_by_user": true
+}

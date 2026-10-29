@@ -1,0 +1,3822 @@
+{
+  "schemaSnapshot": "2026-10-29",
+  "projectRef": "qmzmkijlarwdlslipaou",
+  "content": "SANITIZED structural metadata only (no SQL definitions or data)",
+  "restoreReady": false,
+  "catalogCounts": {
+    "tables": 32,
+    "columns": 220,
+    "constraints": 124,
+    "indexes": 58,
+    "policies": 15,
+    "routines": 74,
+    "triggers": 2,
+    "views": 0,
+    "enums": 0,
+    "sequences": 9,
+    "extensions": 8,
+    "grants": 0
+  },
+  "tables": [
+    {
+      "schema": "private",
+      "name": "callio_sync_lease",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "private",
+      "name": "crm_settings",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "activities",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "admin_events",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "allocation_batches",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "allocation_job_items",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "allocation_jobs",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "callio_accounts",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "callio_calls",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "callio_link_requests",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "callio_sync_state",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "crm_access_audit",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "crm_access_group_members",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "crm_access_group_rules",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "crm_access_groups",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "elh_autopilot_audit",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "elh_autopilot_settings",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "elh_callio_crm_audit",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "leads",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "legacy_archive",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "notifications",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "profiles",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_attendance",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_attendance_adjustments",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_attendance_audit",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_attendance_periods",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_attendance_policy",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_reminder_deliveries",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_shift_audit_logs",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_shift_policies",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_shift_registrations",
+      "type": "table",
+      "rlsEnabled": true
+    },
+    {
+      "schema": "public",
+      "name": "tls_shift_slots",
+      "type": "table",
+      "rlsEnabled": true
+    }
+  ],
+  "columns": [
+    {
+      "schema": "private",
+      "table": "callio_sync_lease",
+      "column": "id",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "private",
+      "table": "callio_sync_lease",
+      "column": "lease",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "private",
+      "table": "callio_sync_lease",
+      "column": "expires",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "private",
+      "table": "crm_settings",
+      "column": "id",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "private",
+      "table": "crm_settings",
+      "column": "reminders",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "lead_id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "actor",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "kind",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "status",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "note",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "legacy_id",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "column": "next_followup",
+      "type": "date",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "column": "actor",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "column": "kind",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "column": "target",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "column": "detail",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "column": "id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "column": "actor",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "column": "plan",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "column": "result",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "column": "job_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "column": "seq",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "column": "lead_id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "column": "owner_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "column": "state",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "column": "id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "column": "actor",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "column": "request",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "column": "state",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "email",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "name",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "extension",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "profile_id",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "verified_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "column": "verified_by",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "owner_id",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "started_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "ended_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "direction",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "from_number",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "to_number",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "extension",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "duration_seconds",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "talk_seconds",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "outcome",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "source_data",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "column": "synced_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "column": "profile_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "column": "callio_id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "column": "status",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "column": "reviewed_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "column": "reviewed_by",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "column": "id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "column": "last_success",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "column": "history_from",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "column": "records",
+      "type": "bigint",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "column": "detail",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "column": "actor_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "column": "event",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "column": "details",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "column": "user_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "column": "group_id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "column": "assigned_by",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "group_id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "module",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "can_create",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "can_read",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "can_update",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "can_delete",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "column": "can_export",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "column": "code",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "column": "name",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "column": "system_group",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "column": "active",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "column": "actor",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "column": "action",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "column": "before_state",
+      "type": "jsonb",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "column": "after_state",
+      "type": "jsonb",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "id",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "enabled",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "auto_assign_enabled",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "auto_recycle_enabled",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "rules",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "revision",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "call_id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "lead_id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "owner_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "outcome",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "status_before",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "status_after",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "column": "applied_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "customer_id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "name",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "phone",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "project",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "assigned_to",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "status",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "next_followup",
+      "type": "date",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "notes",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "source",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "priority",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "version",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "search_document",
+      "type": "tsvector",
+      "notNull": false,
+      "identity": "",
+      "generated": "s"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "legacy_data",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "last_contact",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "column": "search_folded",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": "s"
+    },
+    {
+      "schema": "public",
+      "table": "legacy_archive",
+      "column": "source",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "legacy_archive",
+      "column": "record_key",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "legacy_archive",
+      "column": "payload",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "id",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "owner_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "kind",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "title",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "body",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "read_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "column": "reference",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "column": "id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "column": "email",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "column": "name",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "column": "role",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "column": "active",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "registration_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "employee_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "check_in_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "check_out_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "approved_in_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "approved_out_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "approved_by",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "status",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "note",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "attendance_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "employee_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "requested_in",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "requested_out",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "reason",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "status",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "decided_by",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "decided_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "manager_note",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "attendance_id",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "employee_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "actor_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "action",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "detail",
+      "type": "jsonb",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "column": "month_start",
+      "type": "date",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "column": "locked_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "column": "locked_by",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "column": "note",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "column": "id",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "column": "early_checkin_minutes",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "column": "late_grace_minutes",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "column": "checkout_late_minutes",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "column": "minutes_per_workday",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "column": "reminder_key",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "column": "employee_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "column": "reminder_kind",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "column": "shift_date",
+      "type": "date",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "registration_id",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "employee_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "actor_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "action",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "old_status",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "new_status",
+      "type": "text",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "note",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "id",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "min_weekly",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "registration_weekday",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "deadline_weekday",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "deadline_hour",
+      "type": "integer",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "capacity_per_shift",
+      "type": "integer",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "reminder_enabled",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "employee_id",
+      "type": "uuid",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "slot_id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "status",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "approval_source",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "reason",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "created_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "updated_at",
+      "type": "timestamp with time zone",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "decided_by",
+      "type": "uuid",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "column": "decided_at",
+      "type": "timestamp with time zone",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "column": "id",
+      "type": "bigint",
+      "notNull": true,
+      "identity": "a",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "column": "work_date",
+      "type": "date",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "column": "shift",
+      "type": "text",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "column": "capacity",
+      "type": "integer",
+      "notNull": false,
+      "identity": "",
+      "generated": ""
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "column": "open",
+      "type": "boolean",
+      "notNull": true,
+      "identity": "",
+      "generated": ""
+    }
+  ],
+  "constraints": [
+    {
+      "schema": "private",
+      "table": "callio_sync_lease",
+      "name": "callio_sync_lease_id_check",
+      "type": "c"
+    },
+    {
+      "schema": "private",
+      "table": "callio_sync_lease",
+      "name": "callio_sync_lease_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "private",
+      "table": "crm_settings",
+      "name": "crm_settings_id_check",
+      "type": "c"
+    },
+    {
+      "schema": "private",
+      "table": "crm_settings",
+      "name": "crm_settings_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_actor_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_lead_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_legacy_id_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "name": "admin_events_actor_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "name": "admin_events_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "name": "admin_events_target_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "name": "allocation_batches_actor_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "name": "allocation_batches_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_job_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_job_id_lead_id_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_lead_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_owner_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_state_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "name": "allocation_jobs_actor_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "name": "allocation_jobs_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "name": "allocation_jobs_state_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_email_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_profile_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_profile_id_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_verified_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_calls_owner_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_calls_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "callio_link_requests_callio_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "callio_link_requests_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "callio_link_requests_profile_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "callio_link_requests_reviewed_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "callio_link_requests_status_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "name": "callio_sync_state_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "name": "crm_access_audit_actor_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "name": "crm_access_audit_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "name": "crm_access_group_members_assigned_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "name": "crm_access_group_members_group_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "name": "crm_access_group_members_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "name": "crm_access_group_members_user_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "name": "crm_access_group_rules_group_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "name": "crm_access_group_rules_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "name": "crm_access_groups_code_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "name": "crm_access_groups_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "name": "elh_autopilot_audit_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "name": "elh_autopilot_settings_auto_assign_enabled_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "name": "elh_autopilot_settings_auto_recycle_enabled_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "name": "elh_autopilot_settings_enabled_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "name": "elh_autopilot_settings_id_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "name": "elh_autopilot_settings_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "name": "elh_callio_crm_audit_call_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "name": "elh_callio_crm_audit_lead_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "name": "elh_callio_crm_audit_owner_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "name": "elh_callio_crm_audit_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_assigned_to_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_name_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_notes_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_phone_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_status_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "legacy_archive",
+      "name": "legacy_archive_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notifications_owner_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notifications_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notifications_reference_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_email_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_role_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_att_approved_out_effective_in_chk",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_att_checkout_effective_in_chk",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_att_effective_times_order_chk",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_approved_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_employee_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_registration_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_registration_id_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_status_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_attendance_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_decided_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_employee_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_reason_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_status_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "name": "tls_attendance_audit_actor_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "name": "tls_attendance_audit_attendance_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "name": "tls_attendance_audit_employee_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "name": "tls_attendance_audit_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "name": "tls_attendance_periods_locked_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "name": "tls_attendance_periods_month_start_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "name": "tls_attendance_periods_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_checkout_late_minutes_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_early_checkin_minutes_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_id_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_late_grace_minutes_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_minutes_per_workday_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "name": "tls_reminder_deliveries_employee_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "name": "tls_reminder_deliveries_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "name": "tls_reminder_deliveries_reminder_key_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "name": "tls_shift_audit_logs_actor_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "name": "tls_shift_audit_logs_employee_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "name": "tls_shift_audit_logs_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "name": "tls_shift_audit_logs_registration_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_capacity_per_shift_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_deadline_hour_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_deadline_weekday_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_id_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_min_weekly_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_registration_weekday_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_approval_source_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_decided_by_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_employee_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_employee_id_slot_id_key",
+      "type": "u"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_slot_id_fkey",
+      "type": "f"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_status_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_capacity_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_pkey",
+      "type": "p"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_shift_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_work_date_check",
+      "type": "c"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_work_date_shift_key",
+      "type": "u"
+    }
+  ],
+  "indexes": [
+    {
+      "schema": "private",
+      "table": "callio_sync_lease",
+      "name": "callio_sync_lease_pkey"
+    },
+    {
+      "schema": "private",
+      "table": "crm_settings",
+      "name": "crm_settings_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_lead_page"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_legacy_id_key"
+    },
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activities_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "name": "admin_events_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "name": "allocation_batches_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_job_id_lead_id_key"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "allocation_job_items_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "name": "allocation_jobs_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_email_key"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_profile_id_key"
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_calls_owner_time"
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_calls_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_calls_time"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "callio_link_requests_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "name": "callio_sync_state_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_audit",
+      "name": "crm_access_audit_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_members",
+      "name": "crm_access_group_members_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_group_rules",
+      "name": "crm_access_group_rules_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "name": "crm_access_groups_code_key"
+    },
+    {
+      "schema": "public",
+      "table": "crm_access_groups",
+      "name": "crm_access_groups_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_audit",
+      "name": "elh_autopilot_audit_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "elh_autopilot_settings",
+      "name": "elh_autopilot_settings_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "name": "elh_callio_crm_audit_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_owner_due"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_owner_page"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_owner_status_page"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_page"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_phone"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_search"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_search_folded_trgm"
+    },
+    {
+      "schema": "public",
+      "table": "legacy_archive",
+      "name": "legacy_archive_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notifications_owner_time"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notifications_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notifications_reference_key"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_email_key"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_employee_idx"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance",
+      "name": "tls_attendance_registration_id_key"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_adjustments_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_adjustments",
+      "name": "tls_attendance_one_pending"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_audit",
+      "name": "tls_attendance_audit_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_periods",
+      "name": "tls_attendance_periods_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_attendance_policy",
+      "name": "tls_attendance_policy_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "name": "tls_reminder_deliveries_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_reminder_deliveries",
+      "name": "tls_reminder_deliveries_reminder_key_key"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_audit_logs",
+      "name": "tls_shift_audit_logs_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_policies",
+      "name": "tls_shift_policies_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_regs_employee"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_regs_slot_status"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_employee_id_slot_id_key"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_registrations",
+      "name": "tls_shift_registrations_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_pkey"
+    },
+    {
+      "schema": "public",
+      "table": "tls_shift_slots",
+      "name": "tls_shift_slots_work_date_shift_key"
+    }
+  ],
+  "policies": [
+    {
+      "schema": "public",
+      "table": "activities",
+      "name": "activity_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "admin_events",
+      "name": "admin_events_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_batches",
+      "name": "allocation_admin_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_job_items",
+      "name": "job_items_admin_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "allocation_jobs",
+      "name": "jobs_admin_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "callio_accounts",
+      "name": "callio_accounts_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "callio_link_requests",
+      "name": "link_requests_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "callio_sync_state",
+      "name": "sync_admin_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "elh_callio_crm_audit",
+      "name": "elh_callio_audit_admin_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "leads_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "legacy_archive",
+      "name": "legacy_admin_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notification_read",
+      "command": "SELECT"
+    },
+    {
+      "schema": "public",
+      "table": "notifications",
+      "name": "notification_update",
+      "command": "UPDATE"
+    },
+    {
+      "schema": "public",
+      "table": "profiles",
+      "name": "profiles_read",
+      "command": "SELECT"
+    }
+  ],
+  "routines": [
+    {
+      "schema": "private",
+      "name": "allocation_plan",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "daily_reminders",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "dashboard_calls",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "fold_text",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "is_admin",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "is_staff",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "notify_assignment",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "resolve_callio_owner",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_att_locked",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_att_minutes",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_att_shift_bounds",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_deadline",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_deadline_before",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_generate_reminders",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "private",
+      "name": "tls_week_start",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "claim_callio_sync",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_activity_page",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_admin_history",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_allocate_batch",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_assign",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_call_report",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_call_transcript",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_callio_lead_history",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_can",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_create",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_daily_queue",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_dashboard",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_dashboard_calls",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_detail",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_duplicate",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_executive_summary",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_health",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_import_pool",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_intake",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_intelligence_leads",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_intelligence_page",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_job_create",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_job_preview",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_job_status",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_job_step",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_leads",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_link_callio",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_prepare_call",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_profile",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_quality",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_rbac_matrix",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_rbac_save",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_read_notifications",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_request_callio_link",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_review_callio_link",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_set_active",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_set_reminders",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_staff360",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_staff_callio_recent",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_staff_kanban_counts_v1",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_staff_leads_v3",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_summary",
+      "securityDefiner": false,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_team",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "crm_update",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "elh_autopilot_admin_state",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "elh_autopilot_save_rules",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "elh_autopilot_shadow",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "elh_callio_reconcile",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "release_callio_sync",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_admin_decide",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_admin_overview",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_att_action",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_att_decide",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_att_lock_month",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_att_report",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_att_request",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_cancel",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_register",
+      "securityDefiner": true,
+      "routineType": "f"
+    },
+    {
+      "schema": "public",
+      "name": "tls_week",
+      "securityDefiner": true,
+      "routineType": "f"
+    }
+  ],
+  "triggers": [
+    {
+      "schema": "public",
+      "table": "callio_calls",
+      "name": "callio_resolve_owner"
+    },
+    {
+      "schema": "public",
+      "table": "leads",
+      "name": "notify_assignment"
+    }
+  ],
+  "sequences": [
+    {
+      "schema": "public",
+      "name": "activities_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "admin_events_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "crm_access_audit_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "crm_access_groups_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "elh_autopilot_audit_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "tls_attendance_audit_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "tls_reminder_deliveries_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "tls_shift_audit_logs_id_seq"
+    },
+    {
+      "schema": "public",
+      "name": "tls_shift_slots_id_seq"
+    }
+  ]
+}

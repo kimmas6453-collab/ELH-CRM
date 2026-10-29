@@ -1,0 +1,72 @@
+{
+  "checked_at_vietnam_date": "2026-10-29",
+  "project_ref": "qmzmkijlarwdlslipaou",
+  "project_name": "kimmas6453-collab's Project",
+  "project_kind": "PRODUCTION_CANDIDATE_CONFIRMED_BY_HANDOFF_AND_OLD_README",
+  "source": "read-only Supabase connector catalog",
+  "schemas_examined": [
+    "public",
+    "private"
+  ],
+  "tables_count": 32,
+  "rls_note": "All 32 application tables in public/private have RLS enabled according to Supabase catalog; no guarantee policies are sufficient.",
+  "policies_count": 15,
+  "sql_functions_count": 74,
+  "triggers_count_including_supabase_managed_storage": 9,
+  "edge_functions": [
+    {
+      "slug": "callio-sync",
+      "live_version": 8,
+      "source_sha256": "212cf5d7dc6d671a444b6d11bc7d2ab153760b18a287ce61aedd154ae4ea8a35",
+      "identical_to_local_20261019": true,
+      "verify_jwt": false
+    },
+    {
+      "slug": "crm-accounts",
+      "live_version": 2,
+      "source_sha256": "b043208ffce7db41f2342cdf104849b819a264c2c0eb3669ea1df5047f13520f",
+      "identical_to_local_20261019": true,
+      "verify_jwt": false
+    }
+  ],
+  "database_migration_history_entries": 0,
+  "supabase_storage_buckets": 0,
+  "supabase_storage_objects": 0,
+  "table_names": [
+    "private.callio_sync_lease",
+    "private.crm_settings",
+    "public.activities",
+    "public.admin_events",
+    "public.allocation_batches",
+    "public.allocation_job_items",
+    "public.allocation_jobs",
+    "public.callio_accounts",
+    "public.callio_calls",
+    "public.callio_link_requests",
+    "public.callio_sync_state",
+    "public.crm_access_audit",
+    "public.crm_access_group_members",
+    "public.crm_access_group_rules",
+    "public.crm_access_groups",
+    "public.elh_autopilot_audit",
+    "public.elh_autopilot_settings",
+    "public.elh_callio_crm_audit",
+    "public.leads",
+    "public.legacy_archive",
+    "public.notifications",
+    "public.profiles",
+    "public.tls_attendance",
+    "public.tls_attendance_adjustments",
+    "public.tls_attendance_audit",
+    "public.tls_attendance_periods",
+    "public.tls_attendance_policy",
+    "public.tls_reminder_deliveries",
+    "public.tls_shift_audit_logs",
+    "public.tls_shift_policies",
+    "public.tls_shift_registrations",
+    "public.tls_shift_slots"
+  ],
+  "live_sql_schema_ddl_included": false,
+  "needs_to_run_local_export_script": true,
+  "warning": "DO NOT assume 20261019 migrations reproduce the live database of 20261029. Migration history is empty; do not run supabase db push or reset against production."
+}

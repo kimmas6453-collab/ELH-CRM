@@ -1,0 +1,1 @@
+Schema catalog exports are kept OUTSIDE the Git repository until reviewed. Use RUN_EXPORT_NO_DOCKER.cmd. The export produces JSON catalog metadata, NOT pg_dump/replayable SQL. Never run 19/10 migrations against Production.
