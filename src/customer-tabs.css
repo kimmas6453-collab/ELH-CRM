@@ -1,0 +1,69 @@
+/* ELLIE HOMES CUSTOMER DETAIL */
+#detail:has(.eh-customer-tabs) {
+  width: min(94vw, 900px);
+  max-width: 900px;
+  max-height: 92dvh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.eh-customer-tabs {
+  display: flex;
+  gap: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: white;
+  padding: 14px 0;
+  margin: 20px 0;
+  border-bottom: 1px solid #e5eaf0;
+}
+
+.eh-customer-tabs button {
+  flex: 1;
+  padding: 13px 16px;
+  border: 1px solid #dce4ec;
+  border-radius: 9px;
+  background: white;
+  color: #102a40;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.eh-customer-tabs button.active {
+  color: white;
+  background: #102a40;
+  border-color: #102a40;
+}
+
+.eh-customer-current,
+.eh-customer-history {
+  padding: 8px 0 20px;
+}
+
+.eh-customer-current[hidden],
+.eh-customer-history[hidden] {
+  display: none !important;
+}
+
+.eh-customer-history article {
+  padding: 16px 0;
+  border-bottom: 1px solid #edf0f4;
+}
+
+@media (max-width: 767px) {
+  #detail:has(.eh-customer-tabs) {
+    width: 100vw;
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    border-radius: 0;
+    padding: 18px;
+  }
+
+  .eh-customer-tabs button {
+    font-size: 14px;
+    padding: 12px 8px;
+  }
+}

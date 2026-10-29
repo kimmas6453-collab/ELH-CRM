@@ -1,0 +1,220 @@
+/* SALES UX V2: Desktop */
+
+.eh-ux-eye {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:38px;
+  height:38px;
+  min-width:38px;
+  border:1px solid #dce5ef;
+  border-radius:9px;
+  background:#fff;
+  color:#102a40;
+  cursor:pointer;
+}
+
+.eh-ux-eye:hover {
+  background:#edf4ff;
+  border-color:#9bb8ea;
+}
+
+.eh-ux-eye:focus-visible,
+.lead-row:focus-visible {
+  outline:2px solid #245fe5;
+  outline-offset:2px;
+}
+
+.lead-actions {
+  white-space:nowrap;
+}
+
+.lead-actions .eh-ux-eye {
+  margin-right:8px;
+}
+
+.eh-ux-mobile-footer {
+  display:none;
+}
+
+/* SALES UX V2: Mobile */
+
+@media(max-width:767px) {
+
+  .eh-ux-staff .sidebar [data-mode]:not([data-mode="all"]),
+  .eh-ux-staff .mobile-nav [data-mode]:not([data-mode="all"]) {
+    display:none!important;
+  }
+
+  .eh-ux-staff .mobile-nav [data-mode="all"] {
+    flex:1;
+  }
+
+  .eh-ux-staff .table-scroll {
+    overflow:visible;
+  }
+
+  .eh-ux-staff .table-scroll table,
+  .eh-ux-staff .table-scroll tbody {
+    display:block;
+    width:100%;
+  }
+
+  .eh-ux-staff .table-scroll thead {
+    display:none;
+  }
+
+  .eh-ux-staff .lead-row {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) auto;
+    gap:7px 10px;
+    margin-bottom:12px;
+    padding:14px;
+    border:1px solid #e0e7f0;
+    background:#fff;
+    border-radius:14px;
+    cursor:pointer;
+    width:100%;
+    box-sizing:border-box;
+  }
+
+  .eh-ux-staff .lead-row > td {
+    display:block;
+    border:0;
+    padding:0;
+    min-width:0;
+  }
+
+  .eh-ux-staff .lead-avatar {
+    display:none!important;
+  }
+
+  .eh-ux-staff .lead-name {
+    grid-column:1;
+    grid-row:1;
+  }
+
+  .eh-ux-staff .lead-project {
+    grid-column:1;
+    grid-row:2;
+    font-size:13px;
+    color:#71829b;
+  }
+
+  .eh-ux-staff .lead-status {
+    grid-column:2;
+    grid-row:1;
+    justify-self:end;
+  }
+
+  .eh-ux-staff .lead-followup {
+    grid-column:1;
+    grid-row:3;
+    font-size:12px;
+  }
+
+  .eh-ux-staff .lead-actions {
+    grid-column:2;
+    grid-row:2/span 2;
+    align-self:center;
+    justify-self:end;
+  }
+
+  .eh-ux-staff .lead-actions .eh-ux-eye {
+    display:none!important;
+  }
+
+  .eh-ux-staff .lead-actions .call-button {
+    min-height:44px;
+    padding:9px 12px;
+    border-radius:10px;
+    white-space:nowrap;
+  }
+
+  .eh-ux-staff .lead-row:active {
+    background:#f3f7fd;
+  }
+
+  /* Hide staff navigation while viewing detail. */
+  .workspace:has(.eh4-page) .mobile-nav,
+  .workspace:has(.eh-v3-page) .mobile-nav,
+  .workspace:has(.eh-vn-detail-page) .mobile-nav {
+    display:none!important;
+  }
+
+  /* Back stays accessible near the top. */
+  .eh4-page .eh4-breadcrumb,
+  .eh-v3-page .eh-v3-back-wrap,
+  .eh-vn-detail-page .eh-vn-back-wrap {
+    position:sticky;
+    top:0;
+    z-index:20;
+    background:#fff;
+    padding:12px;
+    border-bottom:1px solid #e1e8f1;
+  }
+
+  .eh4-page,
+  .eh-v3-page,
+  .eh-vn-detail-page {
+    padding-bottom:calc(115px + env(safe-area-inset-bottom))!important;
+  }
+
+  /* Original form save remains available on desktop only. */
+  .eh4-page form button[type="submit"],
+  .eh-v3-page form button[type="submit"],
+  .eh-vn-detail-page form button[type="submit"] {
+    display:none!important;
+  }
+
+  .eh-ux-mobile-footer {
+    position:fixed;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:100;
+    display:grid;
+    grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);
+    gap:10px;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    border-top:1px solid #e1e8f1;
+    background:#fff;
+    box-shadow:0 -5px 20px rgba(0,0,0,.06);
+  }
+
+  .eh-ux-mobile-footer button {
+    min-height:48px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+  }
+
+  .eh-ux-mobile-call {
+    border:1px solid #bdd0e6;
+    color:#102a40;
+    background:#fff;
+  }
+
+  .eh-ux-mobile-save {
+    border:0;
+    color:#fff;
+    background:#102a40;
+  }
+
+  .eh-ux-mobile-footer button:disabled {
+    opacity:.48;
+    cursor:not-allowed;
+  }
+
+  .eh-ux-mobile-message {
+    grid-column:1/-1;
+    text-align:center;
+    font-size:12px;
+    color:#526983;
+  }
+
+  .eh-ux-mobile-message:empty {
+    display:none;
+  }
+}

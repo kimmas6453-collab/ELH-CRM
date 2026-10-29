@@ -1,0 +1,350 @@
+/*
+ ELLIE HOMES CRM
+ SPRINT 01 - UI FOUNDATION
+ Loaded after previous responsive modules.
+*/
+
+:root {
+  --elh-primary: #102A40;
+  --elh-primary-hover: #173B59;
+  --elh-background: #F5F7FA;
+  --elh-surface: #FFFFFF;
+  --elh-border: #DFE7F0;
+  --elh-text: #102A40;
+  --elh-muted: #64748B;
+  --elh-radius: 14px;
+  --elh-touch: 44px;
+}
+
+#app,
+#app .workspace {
+  min-width: 0;
+}
+
+#app button,
+#app input,
+#app select,
+#app textarea {
+  font-family: inherit;
+}
+
+#app button {
+  touch-action: manipulation;
+}
+
+#app button:focus-visible,
+#app a:focus-visible,
+#app input:focus-visible,
+#app select:focus-visible,
+#app textarea:focus-visible {
+  outline: 2px solid #245FE5;
+  outline-offset: 2px;
+}
+
+#app .lead-row .lead-actions button {
+  cursor: pointer;
+}
+
+#app .lead-row .eh-ux-eye,
+#app .lead-row .eh21-eye {
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+/* CUSTOMER DETAIL - DESKTOP */
+
+#app .eh4-page,
+#app .eh-v3-page,
+#app .eh-vn-detail-page {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#app .eh4-grid,
+#app .eh-v3-columns,
+#app .eh-vn-grid {
+  min-width: 0;
+  align-items: start;
+}
+
+#app .eh4-card,
+#app .eh-v3-card,
+#app .eh-vn-card {
+  min-width: 0;
+  border-radius: var(--elh-radius);
+}
+
+#app .eh4-save,
+#app .eh-v3-save,
+#app .eh-vn-save-btn {
+  min-height: 48px;
+  background: var(--elh-primary);
+}
+
+#app .eh4-save:hover,
+#app .eh-v3-save:hover,
+#app .eh-vn-save-btn:hover {
+  background: var(--elh-primary-hover);
+}
+
+#app .eh4-history,
+#app .eh-v3-timeline,
+#app .eh-vn-history-list {
+  overscroll-behavior: contain;
+}
+
+/* TABLET */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #app .eh4-grid,
+  #app .eh-v3-columns,
+  #app .eh-vn-grid {
+    grid-template-columns: 1fr;
+  }
+
+  #app .lead-actions button {
+    min-height: 40px;
+  }
+}
+
+/* MOBILE FOUNDATION */
+
+@media (max-width: 767px) {
+
+  html,
+  body,
+  #app {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: clip;
+  }
+
+  #app *,
+  #app *::before,
+  #app *::after {
+    box-sizing: border-box;
+  }
+
+  #app .workspace,
+  #app .workspace > main.content {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  #app .workspace > main.content {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  #app .table-card,
+  #app .table-scroll,
+  #app .toolbar {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  #app .table-scroll {
+    overflow-x: clip !important;
+  }
+
+  /* STAFF LIST CARDS */
+
+  #app .workspace .lead-row {
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  #app .lead-row .lead-actions {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  /* Mobile opens detail by tapping the card.
+     Callio remains a separate inline action. */
+
+  #app .lead-row .eh-ux-eye,
+  #app .lead-row .eh21-eye {
+    display: none !important;
+  }
+
+  #app .lead-row .lead-actions .call-button {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    min-height: var(--elh-touch) !important;
+    margin: 0 !important;
+    border-radius: 10px;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+  }
+
+  /* DETAIL HEADER */
+
+  #app .eh4-header,
+  #app .eh-v3-header,
+  #app .eh-vn-detail-header {
+    width: 100%;
+    max-width: 100%;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  #app .eh4-avatar,
+  #app .eh-v3-avatar,
+  #app .eh-vn-avatar {
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    font-size: 20px;
+  }
+
+  #app .eh4-heading h1,
+  #app .eh-v3-identity h1,
+  #app .eh-vn-hero-text h1 {
+    font-size: clamp(21px, 5.5vw, 25px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  /* DETAIL COLUMNS */
+
+  #app .eh4-grid,
+  #app .eh-v3-columns,
+  #app .eh-vn-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0,1fr) !important;
+    gap: 12px;
+  }
+
+  #app .eh4-card,
+  #app .eh-v3-card,
+  #app .eh-vn-card {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 15px;
+  }
+
+  #app .eh4-fields,
+  #app .eh4-form-grid,
+  #app .eh-v3-fields,
+  #app .eh-vn-readonly-grid,
+  #app .eh-vn-form-grid {
+    grid-template-columns: minmax(0,1fr) !important;
+  }
+
+  /* MOBILE BACK */
+
+  #app .eh4-breadcrumb,
+  #app .eh-v3-back-wrap,
+  #app .eh-vn-back-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 30;
+    background: #FFFFFF;
+    border-bottom: 1px solid var(--elh-border);
+    padding: 12px 4px;
+  }
+
+  /* MOBILE BOTTOM CTA */
+
+  #app .eh-ux-mobile-footer {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    display: grid !important;
+    grid-template-columns:
+      minmax(0,1fr) minmax(0,1.35fr) !important;
+    gap: 10px;
+    padding:
+      10px 12px
+      calc(10px + env(safe-area-inset-bottom)) !important;
+    background: #FFFFFF;
+    border-top: 1px solid var(--elh-border);
+    z-index: 500;
+  }
+
+  #app .eh-ux-mobile-footer button {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    min-height: 48px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  #app .eh-ux-mobile-footer
+  .eh-ux-mobile-save {
+    background: var(--elh-primary);
+    color: white;
+  }
+
+  #app .eh-ux-mobile-footer
+  button:disabled {
+    opacity: .48;
+  }
+
+  #app .eh4-page,
+  #app .eh-v3-page,
+  #app .eh-vn-detail-page {
+    padding-bottom:
+      calc(125px + env(safe-area-inset-bottom)) !important;
+  }
+
+  /* BOTTOM NAV */
+
+  #app .workspace .mobile-nav {
+    left: 0 !important;
+    right: 0 !important;
+    max-width: 100vw !important;
+    min-width: 0 !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    box-sizing: border-box !important;
+  }
+
+  #app .mobile-nav > button {
+    min-width: 0;
+    min-height: 48px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 390px) {
+
+  #app .eh-ux-mobile-footer {
+    gap: 8px !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+
+  #app .eh-ux-mobile-footer button {
+    padding: 10px 7px;
+    font-size: 13px;
+  }
+
+  #app .eh4-card,
+  #app .eh-v3-card,
+  #app .eh-vn-card {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,106 @@
+/* ELH S5.7-H1A - Desktop UI only */
+@media (min-width:768px) {
+  .workspace {
+    grid-template-columns:224px minmax(0,1fr);
+    min-height:100dvh;
+  }
+
+  .sidebar {
+    position:sticky;
+    top:0;
+    height:100dvh;
+    max-height:100dvh;
+    overflow-y:auto;
+    overflow-x:hidden;
+    overscroll-behavior:contain;
+    scrollbar-width:thin;
+    padding:22px 15px 14px;
+    background:#102a40;
+    color:#edf3f8;
+  }
+
+  .sidebar > .brand {
+    font-size:25px;
+    color:#fff;
+    flex-shrink:0;
+  }
+
+  .sidebar > .nav-label {
+    margin:22px 9px 9px;
+    color:#adbfce;
+    flex-shrink:0;
+  }
+
+  .sidebar > .nav {
+    display:block;
+    width:100%;
+    flex-shrink:0;
+    margin:0 0 3px;
+    padding:10px 12px;
+    text-align:left;
+    color:#dce7f0;
+    background:transparent;
+    border:0;
+    border-radius:9px;
+    font-size:12.5px;
+    line-height:1.35;
+  }
+
+  .sidebar > .nav:hover,
+  .sidebar > .nav.active {
+    color:#fff;
+    background:#24445e;
+  }
+
+  .sidebar-bottom {
+    position:sticky;
+    bottom:-14px;
+    z-index:2;
+    flex-shrink:0;
+    margin-top:auto;
+    padding:14px 0 4px;
+    background:#102a40;
+    border-top:1px solid #ffffff24;
+  }
+
+  .sidebar-bottom strong {
+    display:block;
+    color:#fff;
+    font-size:12px;
+    overflow-wrap:anywhere;
+  }
+
+  .sidebar-bottom small {
+    display:block;
+    color:#bacad7;
+    font-size:11px;
+    line-height:1.45;
+    margin:6px 0 9px;
+    overflow-wrap:anywhere;
+  }
+
+  .sidebar-bottom .nav {
+    display:block;
+    width:100%;
+    margin:0 0 3px;
+    padding:10px 12px;
+    text-align:left;
+    font-size:12.5px;
+    color:#fff !important;
+    background:transparent;
+    border:1px solid transparent;
+    border-radius:9px;
+    opacity:1;
+  }
+
+  .sidebar-bottom .nav:hover,
+  .sidebar-bottom .nav:focus-visible {
+    color:#fff !important;
+    background:#24445e;
+  }
+
+  .content {
+    min-width:0;
+    padding:28px;
+  }
+}

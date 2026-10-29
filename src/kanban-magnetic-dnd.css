@@ -1,0 +1,83 @@
+/* ELLIE HOMES - MAGNETIC KANBAN */
+
+body.ehmag-dragging {
+  user-select:none!important;
+  cursor:grabbing!important;
+}
+
+.ehmag-ghost {
+  position:fixed!important;
+  z-index:99999!important;
+  pointer-events:none!important;
+  margin:0!important;
+  opacity:.9;
+  box-shadow:0 20px 46px rgba(16,42,64,.22)!important;
+  border:1px solid #87A7D4!important;
+  border-radius:12px;
+  will-change:transform;
+  transition:none!important;
+}
+
+.ehv4-card.ehmag-source {
+  opacity:.3!important;
+  filter:grayscale(.2);
+}
+
+.ehv4-lane {
+  transition:
+    background-color .16s ease,
+    border-color .16s ease,
+    box-shadow .16s ease;
+}
+
+.ehv4-lane.ehmag-target {
+  background:#E8F1FD!important;
+  border-color:#5790D5!important;
+  box-shadow:inset 0 0 0 2px rgba(67,131,210,.25);
+}
+
+.ehv4-lane[data-group="closed"].ehmag-target {
+  background:
+    linear-gradient(90deg,
+      rgba(40,130,90,.13) 0%,
+      rgba(40,130,90,.13) 49%,
+      rgba(130,70,90,.14) 51%,
+      rgba(130,70,90,.14) 100%)!important;
+}
+
+.ehv4-card.ehmag-arrived {
+  animation:ehmag-arrive .28s ease-out;
+}
+
+.ehv4-card.ehmag-rollback {
+  animation:ehmag-revert .3s ease-out;
+}
+
+@keyframes ehmag-arrive {
+  from {
+    opacity:.65;
+    transform:translateY(-18px) scale(.97);
+  }
+  to {
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+}
+
+@keyframes ehmag-revert {
+  0% {transform:translateX(14px);opacity:.7}
+  100% {transform:translateX(0);opacity:1}
+}
+
+@media(max-width:767px){
+  .ehmag-ghost{
+    display:none!important;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .ehv4-card.ehmag-arrived,
+  .ehv4-card.ehmag-rollback{
+    animation:none!important;
+  }
+}

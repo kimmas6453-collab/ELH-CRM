@@ -1,0 +1,361 @@
+/* ELH SPRINT 02 - CUSTOMER 360 */
+
+.eh4-page {
+  width:100%;
+  max-width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  padding:8px 0 40px;
+  font-family:inherit;
+  color:#102a40;
+}
+
+.eh4-page [hidden] {
+  display:none!important;
+}
+
+.eh4-breadcrumb {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0 20px;
+  font-size:14px;
+}
+
+.eh4-back {
+  border:0;
+  padding:0;
+  background:transparent;
+  color:#245fe5;
+  cursor:pointer;
+  font:inherit;
+}
+
+.eh4-header {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  padding:22px;
+  border:1px solid #e2e9f1;
+  border-radius:16px;
+  background:#fff;
+  margin-bottom:16px;
+}
+
+.eh4-avatar {
+  width:60px;
+  height:60px;
+  min-width:60px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#e8f1ff;
+  color:#245fe5;
+  font-size:25px;
+  font-weight:800;
+}
+
+.eh4-heading {
+  flex:1;
+  min-width:0;
+}
+
+.eh4-heading small {
+  color:#a47b40;
+  font-weight:700;
+  letter-spacing:.06em;
+}
+
+.eh4-heading h1 {
+  margin:6px 0 10px;
+  font-size:clamp(22px,2.4vw,30px);
+  line-height:1.2;
+  color:#102a40;
+  overflow-wrap:anywhere;
+}
+
+.eh4-meta {
+  display:flex;
+  gap:8px 20px;
+  flex-wrap:wrap;
+  color:#5b718a;
+  font-size:14px;
+}
+
+.eh4-status {
+  display:inline-flex;
+  align-items:center;
+  border-radius:999px;
+  padding:7px 12px;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+}
+
+.eh4-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);
+  align-items:start;
+  gap:16px;
+}
+
+.eh4-card {
+  min-width:0;
+  padding:22px;
+  border:1px solid #e2e9f1;
+  border-radius:16px;
+  background:#fff;
+}
+
+.eh4-card h2 {
+  margin:0 0 18px;
+  font-size:20px;
+  color:#102a40;
+}
+
+.eh4-fields {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  margin-bottom:22px;
+}
+
+.eh4-field {
+  min-width:0;
+}
+
+.eh4-field small,
+.eh4-input span {
+  display:block;
+  margin-bottom:7px;
+  font-weight:650;
+  font-size:13px;
+  color:#39536d;
+}
+
+.eh4-field-value {
+  background:#f8fafc;
+  border:1px solid #e1e8f1;
+  border-radius:9px;
+  padding:11px 12px;
+  line-height:1.5;
+  overflow-wrap:anywhere;
+}
+
+.eh4-form-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.eh4-input {
+  display:block;
+  min-width:0;
+}
+
+.eh4-input input,
+.eh4-input select,
+.eh4-input textarea {
+  width:100%;
+  min-width:0;
+  box-sizing:border-box;
+  padding:11px;
+  border:1px solid #dce5ee;
+  border-radius:9px;
+  font:inherit;
+  color:#102a40;
+}
+
+.eh4-note textarea {
+  resize:vertical;
+  min-height:105px;
+}
+
+.eh4-message {
+  font-size:13px;
+  color:#245fe5;
+  min-height:18px;
+  margin:10px 0;
+}
+
+.eh4-save {
+  display:block;
+  width:100%;
+  min-height:48px;
+  padding:14px;
+  border:0;
+  border-radius:9px;
+  background:#102a40;
+  color:white;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.eh4-save:disabled {
+  opacity:.55;
+}
+
+.eh4-history-header {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:14px;
+}
+
+.eh4-history-header h2 {
+  margin-bottom:4px;
+}
+
+.eh4-history-header small {
+  color:#64748b;
+}
+
+.eh4-filter {
+  min-width:180px;
+  padding:10px;
+  border:1px solid #dce5ee;
+  border-radius:9px;
+  background:#fff;
+}
+
+.eh4-history {
+  max-height:65vh;
+  overflow-y:auto;
+  overscroll-behavior:contain;
+  padding-right:8px;
+}
+
+.eh4-day {
+  font-size:15px;
+  margin:14px 0 8px;
+  color:#102a40;
+}
+
+.eh4-event {
+  position:relative;
+  margin-left:5px;
+  padding:11px 14px 14px;
+  border-left:2px solid #dce8f6;
+}
+
+.eh4-event::before {
+  content:'';
+  position:absolute;
+  top:18px;
+  left:-5px;
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  background:#2f80ed;
+}
+
+.eh4-event-top {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
+  margin-bottom:8px;
+}
+
+.eh4-event-top small,
+.eh4-event-actor {
+  color:#64748b;
+}
+
+.eh4-event p {
+  margin:8px 0;
+  color:#4f6480;
+  line-height:1.55;
+  overflow-wrap:anywhere;
+}
+
+.eh4-channel {
+  display:inline-block;
+  margin-top:8px;
+  background:#f2eafe;
+  color:#7c3aed;
+  border-radius:999px;
+  padding:4px 9px;
+  font-size:12px;
+}
+
+.eh4-more {
+  width:100%;
+  margin-top:12px;
+  padding:11px;
+  border:1px solid #dce5ee;
+  border-radius:9px;
+  background:white;
+  cursor:pointer;
+}
+
+.eh4-empty {
+  color:#64748b;
+}
+
+@media(max-width:900px) {
+  .eh4-grid {
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:767px) {
+  .eh4-page {
+    padding:8px 0 calc(125px + env(safe-area-inset-bottom));
+  }
+
+  .eh4-header {
+    padding:15px;
+    flex-wrap:wrap;
+  }
+
+  .eh4-avatar {
+    width:48px;
+    height:48px;
+    min-width:48px;
+    font-size:20px;
+  }
+
+  .eh4-card {
+    padding:15px;
+  }
+
+  .eh4-fields,
+  .eh4-form-grid {
+    grid-template-columns:1fr;
+  }
+
+  .eh4-breadcrumb {
+    position:sticky;
+    top:0;
+    z-index:30;
+    background:#fff;
+    border-bottom:1px solid #e1e8f1;
+  }
+
+  .eh4-history-header {
+    flex-direction:column;
+    align-items:stretch;
+  }
+
+  .eh4-filter {
+    width:100%;
+  }
+
+  .eh4-history {
+    max-height:55vh;
+  }
+
+  /* Sales UX V2 provides the existing mobile footer.
+     Keep the original form submit for requestSubmit(). */
+  .eh4-page:not(:has(.eh-ux-mobile-footer)) .eh4-save {
+    display:block!important;
+  }
+}
+/* Sprint 06A: compact Callio read-only history action */
+.eh6-callio-note{display:block;color:#687991;font-size:12px;margin-top:4px}
+.eh6-callio-more{font-size:13px;border:1px solid #dce5ee;background:#fff;color:#102a40}
+.eh6-callio-more[hidden]{display:none!important}

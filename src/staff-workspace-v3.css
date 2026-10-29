@@ -1,0 +1,318 @@
+/* ELLIE HOMES - SPRINT 03 STAFF WORKSPACE */
+
+.eh3-staff #metrics{
+  display:none!important;
+}
+
+.eh3-controls{
+  display:grid;
+  gap:12px;
+  margin:12px 0 20px;
+}
+
+.eh3-quicks{
+  display:flex;
+  flex-wrap:nowrap;
+  overflow-x:auto;
+  gap:8px;
+  padding:4px 0 8px;
+  scrollbar-width:thin;
+}
+
+.eh3-quicks button{
+  flex:0 0 auto;
+  padding:10px 14px;
+  border:1px solid #dce5ee;
+  border-radius:24px;
+  background:#fff;
+  color:#102a40;
+  cursor:pointer;
+  min-height:42px;
+}
+
+.eh3-quicks button.active{
+  background:#102a40;
+  color:white;
+  border-color:#102a40;
+}
+
+.eh3-main-filters{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:10px;
+}
+
+.eh3-controls label{
+  display:grid;
+  gap:6px;
+  font-size:13px;
+  font-weight:600;
+}
+
+.eh3-controls input,
+.eh3-controls select{
+  box-sizing:border-box;
+  min-width:0;
+  width:100%;
+  min-height:44px;
+  padding:10px;
+  border:1px solid #dce5ee;
+  border-radius:9px;
+  background:#fff;
+  color:#102a40;
+  font:inherit;
+}
+
+.eh3-toggle,
+.eh3-clear{
+  align-self:end;
+  padding:11px 14px;
+  border:1px solid #dce5ee;
+  border-radius:9px;
+  background:#fff;
+  cursor:pointer;
+  min-height:44px;
+}
+
+.eh3-advanced{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+  border:1px solid #e2e9f1;
+  padding:16px;
+  border-radius:12px;
+  background:#f8fafc;
+}
+
+.eh3-advanced[hidden]{
+  display:none!important;
+}
+
+.eh3-sentinel{
+  height:2px;
+  width:100%;
+}
+
+.eh3-row .lead-actions{
+  white-space:nowrap;
+}
+
+.eh3-view{
+  width:40px;
+  height:40px;
+  border:1px solid #dce5ee;
+  border-radius:9px;
+  background:#fff;
+  color:#102a40;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  margin-right:8px;
+  cursor:pointer;
+}
+
+.eh3-badge{
+  border-radius:999px;
+  padding:6px 10px;
+}
+
+.eh3-blue{
+  background:#e9f5ff;
+  color:#216ba5;
+}
+
+.eh3-green{
+  background:#e6f8ed;
+  color:#16834a;
+}
+
+.eh3-amber{
+  background:#fff4df;
+  color:#a96700;
+}
+
+.eh3-orange{
+  background:#fff0de;
+  color:#b87013;
+}
+
+.eh3-purple{
+  background:#f1edff;
+  color:#7252bc;
+}
+
+.eh3-red{
+  background:#fdebec;
+  color:#c73546;
+}
+
+.eh3-neutral{
+  background:#f1f5f9;
+  color:#475569;
+}
+
+@media(max-width:767px){
+
+  #app .eh3-staff .eh3-main-filters{
+    grid-template-columns:minmax(0,1fr);
+  }
+
+  #app .eh3-staff .eh3-advanced{
+    grid-template-columns:minmax(0,1fr);
+    padding:12px;
+  }
+
+  #app .eh3-staff .table-scroll{
+    overflow-x:clip!important;
+  }
+
+  #app .eh3-staff .table-scroll table,
+  #app .eh3-staff .table-scroll tbody{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+  }
+
+  #app .eh3-staff .table-scroll thead{
+    display:none!important;
+  }
+
+  #app .workspace.eh3-staff
+  .table-scroll tr.eh3-row{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:8px!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+    margin:0 0 12px!important;
+    padding:15px!important;
+    border:1px solid #dce5ee!important;
+    border-radius:14px!important;
+    background:#fff!important;
+    overflow:hidden!important;
+    cursor:pointer;
+  }
+
+  #app .eh3-staff .eh3-row>td{
+    display:block!important;
+    position:static!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    height:auto!important;
+    padding:0!important;
+    margin:0!important;
+    border:0!important;
+    text-align:left!important;
+    overflow-wrap:anywhere;
+  }
+
+  #app .eh3-staff .eh3-row .lead-avatar{
+    display:none!important;
+  }
+
+  #app .eh3-staff .eh3-row .lead-name{
+    order:1;
+  }
+
+  #app .eh3-staff .eh3-row .lead-name button{
+    font-size:16px;
+    font-weight:750;
+    text-align:left;
+  }
+
+  #app .eh3-staff .eh3-row .lead-project{
+    order:2;
+    color:#64748b;
+    font-size:13px;
+  }
+
+  #app .eh3-staff .eh3-row .lead-status{
+    order:3;
+  }
+
+  #app .eh3-staff .eh3-row .lead-followup{
+    order:4;
+    font-size:13px;
+  }
+
+  #app .eh3-staff .eh3-row .lead-actions{
+    order:5;
+    display:flex!important;
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    padding-top:12px!important;
+    margin-top:7px!important;
+    border-top:1px solid #edf1f6!important;
+  }
+
+  #app .eh3-staff .eh3-row
+  .lead-actions .eh3-view,
+  #app .eh3-staff .eh3-row
+  .lead-actions .eh-ux-eye,
+  #app .eh3-staff .eh3-row
+  .lead-actions .eh21-eye{
+    display:none!important;
+  }
+
+  #app .eh3-staff .eh3-row .eh3-call{
+    display:block!important;
+    width:100%!important;
+    min-width:0!important;
+    max-width:100%!important;
+    min-height:46px!important;
+    margin:0!important;
+    padding:12px!important;
+    border-radius:10px!important;
+  }
+}
+/* ELH-TELESALES-POLISH-V1 */
+
+.eh3-staff .eh3-quicks button {
+  min-height:44px;
+  font-weight:650;
+}
+
+.eh3-staff .eh3-quicks button:focus-visible,
+.eh3-staff .eh3-controls button:focus-visible {
+  outline:2px solid #245FE5;
+  outline-offset:2px;
+}
+
+.eh3-staff .eh3-row .lead-name {
+  overflow-wrap:anywhere;
+}
+
+.eh3-staff .eh3-row .lead-actions button {
+  min-height:44px;
+  touch-action:manipulation;
+}
+
+.eh3-staff .eh3-controls input,
+.eh3-staff .eh3-controls select {
+  font-size:14px;
+}
+
+@media(max-width:767px) {
+  .eh3-staff .eh3-quicks {
+    scroll-snap-type:x proximity;
+    -webkit-overflow-scrolling:touch;
+  }
+
+  .eh3-staff .eh3-quicks button {
+    scroll-snap-align:start;
+  }
+
+  .eh3-staff .eh3-row .lead-name button {
+    line-height:1.4;
+  }
+
+  .eh3-staff .eh3-row .lead-actions .call-button {
+    width:100%;
+    min-width:0;
+    min-height:46px;
+  }
+}

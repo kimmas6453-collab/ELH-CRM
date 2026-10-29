@@ -1,0 +1,336 @@
+/* ELLIE HOMES TELESALES FINAL UX */
+
+#app .workspace.eh3-staff {
+  --ehf-header-height:76px;
+}
+
+#app .workspace.eh3-staff main.content > header {
+  position:sticky;
+  top:0;
+  z-index:120;
+  background:#f5f7fa;
+  padding:12px 0;
+  border-bottom:1px solid #e1e8f0;
+}
+
+#app .workspace.eh3-staff .header-actions {
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+#app .workspace.eh3-staff .ehf-icon {
+  width:44px;
+  height:44px;
+  min-width:44px;
+  padding:10px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border:1px solid #dce5ee;
+  border-radius:10px;
+  background:#fff;
+  color:#102a40;
+  cursor:pointer;
+}
+
+#app .workspace.eh3-staff .ehf-dock {
+  position:sticky;
+  top:var(--ehf-header-height);
+  z-index:110;
+  background:#fff;
+  padding:12px;
+  display:flex;
+  gap:12px;
+  align-items:center;
+  min-width:0;
+  border-bottom:1px solid #e1e8f0;
+  box-shadow:0 5px 12px rgba(16,42,64,.04);
+}
+
+#app .workspace.eh3-staff .ehf-dock .toolbar {
+  display:flex;
+  flex:0 1 320px;
+  min-width:150px;
+  padding:0;
+  margin:0;
+  border:0;
+}
+
+#app .workspace.eh3-staff .ehf-dock #search {
+  width:100%;
+  min-width:0;
+}
+
+#app .workspace.eh3-staff .ehf-dock .eh3-controls {
+  flex:1;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  min-width:0;
+  margin:0;
+}
+
+#app .workspace.eh3-staff .ehf-dock .eh3-quicks {
+  flex:1;
+  min-width:0;
+  display:flex;
+  flex-wrap:nowrap;
+  gap:7px;
+  overflow-x:auto;
+  padding:5px 0;
+  scrollbar-width:thin;
+}
+
+#app .workspace.eh3-staff .eh3-quicks button {
+  flex:0 0 auto;
+  min-height:40px;
+  white-space:nowrap;
+  border-radius:20px;
+}
+
+#app .workspace.eh3-staff .eh3-main-filters {
+  display:flex;
+  flex:0 0 auto;
+  gap:8px;
+  align-items:end;
+}
+
+#app .workspace.eh3-staff .eh3-main-filters select {
+  min-width:140px;
+  max-width:170px;
+}
+
+#app .workspace.eh3-staff .eh3-advanced {
+  position:absolute;
+  z-index:150;
+  top:calc(100% + 5px);
+  right:12px;
+  width:min(680px,calc(100vw - 32px));
+  max-height:min(70vh,530px);
+  overflow:auto;
+  background:#fff;
+  border:1px solid #dce5ee;
+  box-shadow:0 12px 32px rgba(16,42,64,.12);
+}
+
+#app .workspace.eh3-staff .eh3-advanced[hidden] {
+  display:none!important;
+}
+
+#app .workspace.eh3-staff .eh-kb-switch {
+  flex:0 0 auto;
+}
+
+#app .workspace.eh3-staff .eh-kb-lane-head {
+  position:sticky;
+  top:0;
+  background:#f5f7fa;
+  z-index:3;
+}
+
+#app .workspace.eh3-staff .ehf-mobile-tabs {
+  display:none;
+}
+
+/* Staff header controls deliberately removed. */
+#app .workspace.eh3-staff
+.header-actions #callio,
+#app .workspace.eh3-staff
+.header-actions #daily,
+#app .workspace.eh3-staff
+.header-actions #new {
+  display:none!important;
+}
+
+@media(max-width:767px) {
+  #app .workspace.eh3-staff main.content > header {
+    padding:8px 0;
+  }
+
+  #app .workspace.eh3-staff .header-actions {
+    display:flex!important;
+    width:auto!important;
+    gap:8px;
+  }
+
+  #app .workspace.eh3-staff
+  .content > header > div:not(.eh21-mobile-toolbar):not(.header-actions) {
+    display:none!important;
+  }
+
+  #app .workspace.eh3-staff
+  .eh21-actions-button {
+    display:none!important;
+  }
+
+  #app .workspace.eh3-staff .ehf-dock {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:7px;
+    padding:8px 0;
+  }
+
+  #app .workspace.eh3-staff .ehf-dock .toolbar {
+    flex:0 0 auto;
+    width:100%;
+  }
+
+  #app .workspace.eh3-staff
+  .ehf-dock .eh3-controls {
+    width:100%;
+    min-width:0;
+    flex:0 0 auto;
+  }
+
+  #app .workspace.eh3-staff
+  .eh3-main-filters label {
+    min-width:0;
+  }
+
+  #app .workspace.eh3-staff
+  .eh3-main-filters select {
+    max-width:120px;
+    min-width:105px;
+  }
+
+  /* Enable mobile Kanban; use only the selected lane. */
+  #app .workspace.eh3-staff .eh-kb-switch {
+    display:flex!important;
+  }
+
+  #app .workspace.eh3-staff
+  .eh-kb-board:not([hidden]) {
+    display:block!important;
+  }
+
+  #app .workspace.eh3-staff .eh-kb-scroll {
+    display:block!important;
+    overflow-x:hidden!important;
+    width:100%!important;
+  }
+
+  #app .workspace.eh3-staff .eh-kb-lane {
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    margin:0!important;
+  }
+
+  #app .workspace.eh3-staff
+  .eh-kb-lane.ehf-lane-hidden {
+    display:none!important;
+  }
+
+  #app .workspace.eh3-staff
+  .ehf-mobile-tabs {
+    display:flex;
+    gap:8px;
+    overflow-x:auto;
+    white-space:nowrap;
+    padding:8px 0 12px;
+    scrollbar-width:thin;
+  }
+
+  #app .workspace.eh3-staff
+  .ehf-mobile-tabs button {
+    flex:0 0 auto;
+    padding:9px 13px;
+    border:1px solid #dce5ee;
+    border-radius:20px;
+    background:#fff;
+    color:#102a40;
+    font:inherit;
+    font-size:13px;
+  }
+
+  #app .workspace.eh3-staff
+  .ehf-mobile-tabs button.active {
+    background:#102a40;
+    color:#fff;
+  }
+
+  #app .workspace.eh3-staff .eh-kb-cards {
+    max-height:none;
+    min-height:0;
+    overflow:visible;
+  }
+
+  #app .workspace.eh3-staff .eh-kb-card {
+    cursor:pointer;
+  }
+
+  #app .workspace.eh3-staff
+  .eh-kb-actions [data-action="view"] {
+    display:none!important;
+  }
+
+  #app .workspace.eh3-staff
+  .eh-kb-actions button {
+    min-height:44px;
+  }
+}
+
+/* Mobile status-change bottom sheet */
+
+.ehf-sheet {
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:rgba(8,25,42,.48);
+  display:flex;
+  align-items:end;
+}
+
+.ehf-sheet-panel {
+  width:100%;
+  padding:22px 16px calc(20px + env(safe-area-inset-bottom));
+  background:#fff;
+  border-radius:20px 20px 0 0;
+  box-sizing:border-box;
+}
+
+.ehf-sheet-panel h3 {
+  margin:0 0 18px;
+  font-size:19px;
+  color:#102a40;
+}
+
+.ehf-sheet-panel select {
+  width:100%;
+  min-height:48px;
+  padding:12px;
+  border:1px solid #dce5ee;
+  border-radius:10px;
+  background:#fff;
+  font:inherit;
+}
+
+.ehf-sheet-actions {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:18px;
+}
+
+.ehf-sheet-actions button {
+  min-height:48px;
+  padding:12px;
+  border:1px solid #dce5ee;
+  border-radius:10px;
+  background:#fff;
+  color:#102a40;
+  font:inherit;
+  font-weight:700;
+}
+
+.ehf-sheet-actions .primary {
+  background:#102a40;
+  color:#fff;
+  border-color:#102a40;
+}
+
+.ehf-sheet-actions button:disabled {
+  opacity:.5;
+}

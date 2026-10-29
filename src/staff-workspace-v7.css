@@ -1,0 +1,7 @@
+/* Sprint07: readable, compact Callio summary; no extra CRM fields. */
+.eh3-row .eh7-recent-call{display:block;margin-top:7px;font-size:12px;line-height:1.5;color:#376584;white-space:normal;overflow-wrap:anywhere}
+.eh3-row .eh7-recent-call[hidden]{display:none!important}
+@media(max-width:767px){
+ #app .eh3-staff .eh3-row .lead-followup{line-height:1.5}
+ #app .eh3-staff .eh3-row .eh7-recent-call{margin-top:5px;font-size:12px;color:#3f6685}
+}

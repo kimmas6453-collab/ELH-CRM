@@ -1,0 +1,17 @@
+import {supabase,rpc} from './api.js';
+import {escapeHtml as e} from './domain.js';
+export async function renderLinkRequest(container){
+ const profile=await rpc('crm_profile');if(!container.isConnected||profile?.role!=='TELESALES')return;
+ const [{data:accounts,error},{data:requests,error:re}]=await Promise.all([supabase.from('callio_accounts').select('email,extension').eq('profile_id',profile.id),supabase.from('callio_link_requests').select('status').eq('profile_id',profile.id)]);
+ if(!container.isConnected)return;if(error||re){container.textContent='Chưa tải được trạng thái ghép. Thử mở lại Callio.';return;}
+ if(accounts?.length){container.innerHTML=`<p>Đã ghép báo cáo: <strong>${e(accounts[0].email)}</strong> · Nhánh ${e(accounts[0].extension)}</p>`;return;}
+ container.innerHTML=`<details><summary>Ghép lịch sử gọi của tôi</summary><p>Nhập email Callio anh/chị đang sử dụng. Quản trị xác nhận đúng người trước khi mở quyền xem lịch sử.</p>${requests?.[0]?`<p>Yêu cầu: ${e({pending:'Đang chờ quản trị xác nhận',approved:'Đã xác nhận',rejected:'Chưa được xác nhận, hãy kiểm tra lại email'}[requests[0].status])}</p>`:''}<form><label>Email Callio<input type="email" name="email" autocomplete="email" required maxlength="254"></label><button>Gửi yêu cầu ghép</button><p role="status"></p></form></details>`;
+ const form=container.querySelector('form');form.onsubmit=async ev=>{ev.preventDefault();const b=form.querySelector('button'),msg=form.querySelector('[role=status]');b.disabled=true;try{await rpc('crm_request_callio_link',{p_email:form.elements.email.value});msg.textContent='Đã gửi. Lịch sử sẽ hiện sau khi quản trị xác nhận.';}catch(err){msg.textContent=err.message;}finally{b.disabled=false;}};
+}
+export async function reviewRequests(container){
+ const {data:requests,error}=await supabase.from('callio_link_requests').select('profile_id,callio_id,created_at').eq('status','pending');if(error)throw error;
+ if(!requests.length){container.textContent='Không có yêu cầu ghép đang chờ.';return;}
+ const [{data:staff,error:pe},{data:accounts,error:ae}]=await Promise.all([supabase.from('profiles').select('id,name,email'),supabase.from('callio_accounts').select('id,email,extension')]);if(pe||ae)throw pe||ae;
+ container.innerHTML='<h3>Nhân viên đang yêu cầu ghép</h3><p>Xác minh người đang sử dụng tài khoản trước khi duyệt. Yêu cầu chưa duyệt không mở quyền xem cuộc gọi.</p>'+requests.map(r=>{const p=staff.find(x=>x.id===r.profile_id),a=accounts.find(x=>x.id===r.callio_id);return `<article class="link-review" data-profile="${e(r.profile_id)}" data-callio="${e(r.callio_id)}"><p><strong>${e(p?.name)}</strong> · ${e(p?.email)}<br>Callio: ${e(a?.email)} · Nhánh ${e(a?.extension)}</p><button data-approve="true">Xác nhận đúng người</button> <button data-approve="false">Từ chối</button><p role="status"></p></article>`;}).join('');
+ container.querySelectorAll('[data-approve]').forEach(b=>b.onclick=async()=>{const row=b.closest('article');row.querySelectorAll('button').forEach(x=>x.disabled=true);try{await rpc('crm_review_callio_link',{p_profile:row.dataset.profile,p_callio:row.dataset.callio,p_approve:b.dataset.approve==='true'});row.querySelector('[role=status]').textContent=b.dataset.approve==='true'?'Đã ghép và cập nhật lịch sử gọi.':'Đã từ chối yêu cầu.';}catch(err){row.querySelector('[role=status]').textContent=err.message;row.querySelectorAll('button').forEach(x=>x.disabled=false);}});
+}
